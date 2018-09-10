@@ -5,9 +5,7 @@ echo ::ORIGEN:: $origen
 cd "$origen"
 
 echo ::DESTINO:: $destino
-(jpg\|JPG\|jpeg\|JPEG\)
-my_array=( `find . -name "*(xlsx\|pdf\)"` )
-#my_array=( `find . -name "*.*"` )
+my_array=( `find . -name "*.pdf" -or -name "*.doc" -or -name "*.docx" -or -name "*.xls" -or -name "*.xlsx" -or -name "*.txt"` )
 my_array_length=${#my_array[@]}
 echo
 echo ::ARCHIVOS:: $my_array_length
